@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2015",
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "removeComments": true,
+    "jsx": "react",
+    "noUnusedLocals": false,
+    "outDir": "dist/",
+//    "declaration": true,
+    "rootDir": "src/"
+  },
+  "filesGlob": [
+    "node_modules/@types",
+    "**/*.ts",
+    "!node_modules"
+  ]
+}
