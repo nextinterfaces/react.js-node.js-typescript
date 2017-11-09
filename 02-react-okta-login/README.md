@@ -3,6 +3,10 @@
 
     $ npm start
 
-    $ nodemon express.js
+Open
 
-    
+    - http://localhost:3000
+
+        -> Click Login to use Okta
+
+        -> Click Logout to use Okta
