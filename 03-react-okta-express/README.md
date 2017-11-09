@@ -1,13 +1,18 @@
 
 # React / Express Okta Sample
 
-Start React app:
+#### Start React app:
+It will run on http://localhost:3000
 
     $ npm start
 
-Start Express server:
+
+#### Start Express server:
+It will run on http://localhost:3001
 
     $ nodemon express.js
+
+
 
 Open
 
