@@ -14,8 +14,6 @@ export default withAuth(
         }
 
         async checkAuthentication() {
-            console.log('(checkAuthentication)')
-
             const authenticated = await this.props.auth.isAuthenticated()
             if (authenticated !== this.state.authenticated) {
                 this.setState({authenticated})
@@ -23,13 +21,10 @@ export default withAuth(
         }
 
         componentDidUpdate() {
-            console.log('(componentDidUpdate)')
             this.checkAuthentication()
         }
 
         render() {
-            console.log('(Home.render)', this.state, this.props.auth)
-
             if (this.state.authenticated === null) {
                 return null
             }

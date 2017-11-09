@@ -63,9 +63,18 @@ app.get('/secure', authenticationRequired, (req, res) => {
  * print some messages for the user if they are authenticated
  */
 app.get('/api/messages', authenticationRequired, (req, res) => {
-    res.json([{
-        message: 'Hello, word!'
-    }]);
+    res.json(
+        {
+            messages:
+                [{
+                    message: 'Hello, msg1'
+                }, {
+                    message: 'Hello, msg2'
+                }, {
+                    message: 'Hello, msg3'
+                }]
+        }
+    );
 });
 
 app.listen(3001, () => {

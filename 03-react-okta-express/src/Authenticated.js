@@ -8,13 +8,16 @@ export default withAuth(
     class Authenticated extends Component {
 
         render() {
-            console.log('Authenticated:', this.props)
+            console.log('Authenticated:', this.props.auth)
             return (
                 <div style={{"background-color": "#BBCCBB"}}>
+
                     This is Authenticated
-                    <br/><br/>
+                    <br/><br/><br/>
+
                     <button onClick={this.props.auth.logout}>Logout</button>
 
+                    <br/><br/><br/>
                     <MessageList/>
 
                 </div>

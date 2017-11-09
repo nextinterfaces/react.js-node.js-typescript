@@ -11,27 +11,32 @@ export default withAuth(class MessageList extends Component {
     }
 
     async componentDidMount() {
-        // try {
-        //     const response = await fetch('http://localhost:3001/api/messages', {
-        //         headers: {
-        //             Authorization: 'Bearer ' + await this.props.auth.getAccessToken()
-        //         }
-        //     })
-        //     const data = await response.json()
-        //     this.setState({messages: data.messages})
-        // } catch (err) {
-        //     // handle error as needed
-        // }
+        try {
+            const response = await fetch('http://localhost:3001/api/messages', {
+                headers: {
+                    Authorization: 'Bearer ' + await this.props.auth.getAccessToken()
+                }
+            })
+            const data = await response.json()
+            this.setState({messages: data.messages})
 
-        const data = {messages:['Messag 1', 'Message 2']}
-        this.setState({messages: data.messages})
+            console.log('MessageList: state', this.state)
+
+        } catch (err) {
+            console.log('(err)', err);
+        }
+
     }
 
     render() {
-        if (!this.state.messages) return <div>Loading..</div>
-        const items = this.state.messages.map(message =>
-            <li key={message}>{message}</li>
+        if (!this.state.messages) return <div>Loading...</div>
+
+        return (
+            <div>
+                API result success:
+                <br/>
+                <code>{JSON.stringify(this.state.messages)}</code>
+            </div>
         )
-        return <ul>{items}</ul>
     }
 })

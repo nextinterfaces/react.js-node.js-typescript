@@ -4,14 +4,17 @@ import {withAuth} from '@okta/okta-react'
 
 export default withAuth(
     class AuthenticatedNot extends Component {
-        render() {
-            console.log('AuthenticatedNot: ', this.props)
 
+        render() {
             return (
                 <div style={{"background-color": "#CCAAAA"}}>
+
                     This is Not Authenticated
-                    <br/><br/>
+                    <br/><br/><br/>
+
                     <button onClick={this.props.auth.login}>Login</button>
+
+                     <br/><br/><br/>
                 </div>
             )
         }
