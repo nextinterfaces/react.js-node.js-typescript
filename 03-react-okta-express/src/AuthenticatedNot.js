@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
-import {withAuth} from '@okta/okta-react';
+import {withAuth} from '@okta/okta-react'
 
 export default withAuth(
     class AuthenticatedNot extends Component {
         render() {
-            console.log('AuthenticatedNot: ', this.props);
+            console.log('AuthenticatedNot: ', this.props)
 
             return (
                 <div style={{"background-color": "#CCAAAA"}}>
@@ -16,4 +16,4 @@ export default withAuth(
             )
         }
     }
-);
+)

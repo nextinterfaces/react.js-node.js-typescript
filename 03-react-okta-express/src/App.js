@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import {Security, SecureRoute, ImplicitCallback} from '@okta/okta-react';
-import Home from './Home';
+import React, {Component} from 'react'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {Security, SecureRoute, ImplicitCallback} from '@okta/okta-react'
+import Home from './Home'
 
 const config = {
     issuer: 'https://dev-977591.oktapreview.com/oauth2/default',
@@ -20,8 +20,8 @@ class App extends Component {
                     <Route path='/implicit/callback' component={ImplicitCallback}/>
                 </Security>
             </Router>
-        );
+        )
     }
 }
 
-export default App;
+export default App

@@ -1,19 +1,24 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
-import {withAuth} from '@okta/okta-react';
+import {withAuth} from '@okta/okta-react'
+
+import MessageList from './MessageList'
 
 export default withAuth(
     class Authenticated extends Component {
 
         render() {
-            console.log('Authenticated:', this.props);
+            console.log('Authenticated:', this.props)
             return (
                 <div style={{"background-color": "#BBCCBB"}}>
                     This is Authenticated
                     <br/><br/>
                     <button onClick={this.props.auth.logout}>Logout</button>
+
+                    <MessageList/>
+
                 </div>
             )
         }
     }
-);
+)
